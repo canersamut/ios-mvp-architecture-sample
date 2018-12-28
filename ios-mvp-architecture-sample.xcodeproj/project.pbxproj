@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FF67E47021D60B730041BC15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E46F21D60B730041BC15 /* AppDelegate.swift */; };
-		FF67E47221D60B730041BC15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E47121D60B730041BC15 /* ViewController.swift */; };
+		FF67E47221D60B730041BC15 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E47121D60B730041BC15 /* UserListVC.swift */; };
 		FF67E47521D60B730041BC15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF67E47321D60B730041BC15 /* Main.storyboard */; };
 		FF67E47821D60B730041BC15 /* ios_mvp_architecture_sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF67E47621D60B730041BC15 /* ios_mvp_architecture_sample.xcdatamodeld */; };
 		FF67E47A21D60B750041BC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF67E47921D60B750041BC15 /* Assets.xcassets */; };
 		FF67E47D21D60B750041BC15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF67E47B21D60B750041BC15 /* LaunchScreen.storyboard */; };
 		FF67E48821D60B750041BC15 /* ios_mvp_architecture_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E48721D60B750041BC15 /* ios_mvp_architecture_sampleTests.swift */; };
 		FF67E49321D60B750041BC15 /* ios_mvp_architecture_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E49221D60B750041BC15 /* ios_mvp_architecture_sampleUITests.swift */; };
+		FF67E4A721D60C870041BC15 /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E4A621D60C870041BC15 /* UserDetailVC.swift */; };
+		FF67E4A921D60CB20041BC15 /* UserListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF67E4A821D60CB20041BC15 /* UserListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		FF67E46C21D60B730041BC15 /* ios-mvp-architecture-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-mvp-architecture-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF67E46F21D60B730041BC15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF67E47121D60B730041BC15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF67E47121D60B730041BC15 /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		FF67E47421D60B730041BC15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF67E47721D60B730041BC15 /* ios_mvp_architecture_sample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_mvp_architecture_sample.xcdatamodel; sourceTree = "<group>"; };
 		FF67E47921D60B750041BC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		FF67E48E21D60B750041BC15 /* ios-mvp-architecture-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-mvp-architecture-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF67E49221D60B750041BC15 /* ios_mvp_architecture_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_mvp_architecture_sampleUITests.swift; sourceTree = "<group>"; };
 		FF67E49421D60B750041BC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF67E4A621D60C870041BC15 /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
+		FF67E4A821D60CB20041BC15 /* UserListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +103,13 @@
 		FF67E46E21D60B730041BC15 /* ios-mvp-architecture-sample */ = {
 			isa = PBXGroup;
 			children = (
+				FF67E4A021D60B9D0041BC15 /* api */,
+				FF67E4A121D60BAE0041BC15 /* model */,
+				FF67E4A221D60BBD0041BC15 /* presentation */,
+				FF67E4A321D60BE20041BC15 /* controller */,
+				FF67E4A421D60BF60041BC15 /* storyboards */,
 				FF67E46F21D60B730041BC15 /* AppDelegate.swift */,
-				FF67E47121D60B730041BC15 /* ViewController.swift */,
-				FF67E47321D60B730041BC15 /* Main.storyboard */,
 				FF67E47921D60B750041BC15 /* Assets.xcassets */,
-				FF67E47B21D60B750041BC15 /* LaunchScreen.storyboard */,
 				FF67E47E21D60B750041BC15 /* Info.plist */,
 				FF67E47621D60B730041BC15 /* ios_mvp_architecture_sample.xcdatamodeld */,
 			);
@@ -126,6 +132,46 @@
 				FF67E49421D60B750041BC15 /* Info.plist */,
 			);
 			path = "ios-mvp-architecture-sampleUITests";
+			sourceTree = "<group>";
+		};
+		FF67E4A021D60B9D0041BC15 /* api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		FF67E4A121D60BAE0041BC15 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FF67E4A221D60BBD0041BC15 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FF67E4A821D60CB20041BC15 /* UserListPresenter.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		FF67E4A321D60BE20041BC15 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF67E47121D60B730041BC15 /* UserListVC.swift */,
+				FF67E4A621D60C870041BC15 /* UserDetailVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		FF67E4A421D60BF60041BC15 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FF67E47B21D60B750041BC15 /* LaunchScreen.storyboard */,
+				FF67E47321D60B730041BC15 /* Main.storyboard */,
+			);
+			path = storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF67E47221D60B730041BC15 /* ViewController.swift in Sources */,
+				FF67E47221D60B730041BC15 /* UserListVC.swift in Sources */,
+				FF67E4A721D60C870041BC15 /* UserDetailVC.swift in Sources */,
 				FF67E47821D60B730041BC15 /* ios_mvp_architecture_sample.xcdatamodeld in Sources */,
+				FF67E4A921D60CB20041BC15 /* UserListPresenter.swift in Sources */,
 				FF67E47021D60B730041BC15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
