@@ -1,0 +1,6 @@
+framework module Pods_ios_mvp_architecture_sample {
+  umbrella header "Pods-ios-mvp-architecture-sample-umbrella.h"
+
+  export *
+  module * { export * }
+}
