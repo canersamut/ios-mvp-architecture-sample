@@ -22,7 +22,7 @@ class UserListVC: UIViewController {
         super.viewDidLoad()
         
         ///TableView
-        mUserListTablewView.register(UINib.init(nibName: "UserListTableViewCell", bundle: nil), forCellReuseIdentifier: "UserListTableViewCell")
+        mUserListTablewView.register(UINib.init(nibName: UserListTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: UserListTableViewCell.identifier)
         
     }
     
@@ -33,7 +33,7 @@ class UserListVC: UIViewController {
 }
 
 
-// MARK:
+// MARK: UserListView Methods
 extension UserListVC: UserListView {
     func loadingUserList() {
         mActivityIndicator.startAnimating()
@@ -57,7 +57,7 @@ extension UserListVC: UserListView {
 }
 
 
-// MARK:
+// MARK: TableView Methods
 extension UserListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,9 +65,16 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UserListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "UserListTableViewCell", for: indexPath) as! UserListTableViewCell
+        let cell:UserListTableViewCell = tableView.dequeueReusableCell(withIdentifier: UserListTableViewCell.identifier, for: indexPath) as! UserListTableViewCell
         cell.configure(user: mUserList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = mUserList[indexPath.row]
+        let userDetailVC:UserDetailVC = UIStoryboard(name: UserDetailVC.storyboardName, bundle: nil).instantiateViewController(withIdentifier: UserDetailVC.identifier) as! UserDetailVC
+        userDetailVC.mUser = selectedUser
+        self.present(userDetailVC, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

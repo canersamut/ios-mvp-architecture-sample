@@ -11,6 +11,9 @@ import UIKit
 
 class UserListTableViewCell: UITableViewCell {
     
+    public static var identifier:String = "UserListTableViewCell"
+    public static var nibName:String = "UserListTableViewCell"
+    
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblMail: UILabel!
@@ -19,10 +22,13 @@ class UserListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+        
     }
     
     override func prepareForReuse() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         
     }
     
@@ -33,9 +39,5 @@ class UserListTableViewCell: UITableViewCell {
         lblPhone.text = user.phone ?? ""
         lblWebsite.text = user.website ?? ""
         
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
 }
